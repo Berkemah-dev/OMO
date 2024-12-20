@@ -1,6 +1,6 @@
 <x-auth-layout>
-    <x-slot name="title">Reset Password - OMO! Your Fashion Partner</x-slot>
-    
+    <x-slot name="title">Reset Password - BERKEMAH Your Fashion Partner</x-slot>
+
     <div x-data="{ loading: false }" class="space-y-6">
         <div class="text-center space-y-2">
             <h2 class="text-2xl font-bold text-gray-800">Reset Kata Sandi</h2>
@@ -12,22 +12,22 @@
             @csrf
             <input type="hidden" name="token" value="{{ $token }}">
             <input type="hidden" name="email" value="{{ $email }}">
-            
+
             <div>
-                <x-auth-input 
-                    type="password" 
-                    name="password" 
-                    placeholder="Kata sandi baru" 
+                <x-auth-input
+                    type="password"
+                    name="password"
+                    placeholder="Kata sandi baru"
                     icon="lock"
                     required
                 />
             </div>
 
             <div>
-                <x-auth-input 
-                    type="password" 
-                    name="password_confirmation" 
-                    placeholder="Konfirmasi kata sandi baru" 
+                <x-auth-input
+                    type="password"
+                    name="password_confirmation"
+                    placeholder="Konfirmasi kata sandi baru"
                     icon="lock"
                     required
                 />

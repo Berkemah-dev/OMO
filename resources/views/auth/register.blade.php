@@ -1,23 +1,23 @@
 <x-auth-layout>
-    <x-slot name="title">Daftar - OMO! Your Fashion Partner</x-slot>
-    
+    <x-slot name="title">Daftar - BERKEMAH Your Fashion Partner</x-slot>
+
     <div x-data="{ loading: false }" class="space-y-6">
         <div class="text-center space-y-2">
-            <h2 class="text-2xl font-bold text-gray-800">Bergabung dengan OMO!</h2>
+            <h2 class="text-2xl font-bold text-gray-800">Bergabung dengan BERKEMAH</h2>
             <p class="text-gray-600">Mulai perjalanan fashionmu bersama kami</p>
         </div>
 
-        <form method="POST" 
-              action="{{ route('auth.register') }}" 
+        <form method="POST"
+              action="{{ route('auth.register') }}"
               class="space-y-5"
               @submit="loading = true">
             @csrf
-            
+
             <div>
-                <x-auth-input 
-                    type="text" 
-                    name="name" 
-                    placeholder="Nama lengkap" 
+                <x-auth-input
+                    type="text"
+                    name="name"
+                    placeholder="Nama lengkap"
                     icon="user"
                     :value="old('name')"
                     required
@@ -26,10 +26,10 @@
             </div>
 
             <div>
-                <x-auth-input 
-                    type="email" 
-                    name="email" 
-                    placeholder="Alamat email" 
+                <x-auth-input
+                    type="email"
+                    name="email"
+                    placeholder="Alamat email"
                     icon="envelope"
                     :value="old('email')"
                     required
@@ -38,10 +38,10 @@
             </div>
 
             <div>
-                <x-auth-input 
-                    type="password" 
-                    name="password" 
-                    placeholder="Kata sandi" 
+                <x-auth-input
+                    type="password"
+                    name="password"
+                    placeholder="Kata sandi"
                     icon="lock"
                     required
                     autocomplete="new-password"
@@ -49,10 +49,10 @@
             </div>
 
             <div>
-                <x-auth-input 
-                    type="password" 
-                    name="password2" 
-                    placeholder="Konfirmasi kata sandi" 
+                <x-auth-input
+                    type="password"
+                    name="password2"
+                    placeholder="Konfirmasi kata sandi"
                     icon="lock"
                     required
                     autocomplete="new-password"
@@ -74,8 +74,8 @@
         </form>
 
         <p class="text-center text-gray-600">
-            Sudah punya akun? 
-            <a href="{{ route('auth.login') }}" 
+            Sudah punya akun?
+            <a href="{{ route('auth.login') }}"
                class="text-blue-500 hover:text-blue-700 font-medium hover:underline transition-colors duration-200">
                 Masuk & Belanja
             </a>

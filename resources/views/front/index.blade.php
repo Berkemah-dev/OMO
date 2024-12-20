@@ -2,14 +2,16 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="bg-gradient-to-br from-blue-50 to-indigo-50">
-    <div class="max-w-7xl mx-auto px-4 py-16">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
+<section class="bg-gradient-to-br" style="background-color: #f7f7f7;">
+    <div class="max-w-7xl mx-auto px-4 py-16" style="background-color: #f7f7f7;">
+        <div class="grid md:grid-cols-2 gap-12 items-center" style="background-color: #f7f7f7;">
             <div>
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Temukan Gayamu dengan Koleksi Terbaru Kami
+                    Koleksi Fashion Eksklusif untuk Gaya Anda
                 </h1>
-                <p class="text-lg text-gray-600 mb-8">Jelajahi pilihan pakaian premium kami yang dirancang untuk gaya unik Anda.</p>
+                <p class="text-lg text-gray-600 mb-8">
+                    Temukan pilihan pakaian terkini yang memadukan gaya, kenyamanan, dan kualitas terbaik.
+                </p>
             </div>
             <div class="hidden md:block relative">
                 <img src="{{ asset('/image/hero.jpg') }}" alt="Hero Image" class="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
@@ -41,13 +43,14 @@
         <a href="{{ route('front.category', $itemCategory->slug) }}" class="group">
             <div class="bg-blue-50 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                 <div class="aspect-[3/4] overflow-hidden relative">
-                    <img src="{{ asset('storage/' . $itemCategory->icon) }}" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                    <img src="{{ asset('storage/' . $itemCategory->icon) }}"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                          alt="{{ $itemCategory->name }}">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 class="text-2xl font-bold text-white mb-2">{{ $itemCategory->name }}</h3>
-                        <p class="text-sm text-white/90">{{ $itemCategory->shirts->count() }} Item</p>
+                        <h3 class="text-2xl font-bold text-yellow-500 mb-2">{{ $itemCategory->name }}</h3>
+
+                        <p class="text-sm text-yellow-500">{{ $itemCategory->shirts->count() }} Item</p>
                     </div>
                 </div>
             </div>
@@ -88,8 +91,8 @@
         <a href="{{ route('front.details', $itemPopularShirt->slug) }}" class="group">
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                 <div class="aspect-square overflow-hidden relative">
-                    <img src="{{ asset('storage/' . $itemPopularShirt->thumbnail) }}" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                    <img src="{{ asset('storage/' . $itemPopularShirt->thumbnail) }}"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                          alt="{{ $itemPopularShirt->name }}">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
@@ -149,8 +152,8 @@
             <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex h-40">
                 <div class="w-40 flex-shrink-0">
                     <div class="aspect-square relative">
-                        <img src="{{ asset('storage/' . $itemNewShirt->thumbnail) }}" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                        <img src="{{ asset('storage/' . $itemNewShirt->thumbnail) }}"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                              alt="{{ $itemNewShirt->name }}">
                     </div>
                 </div>
@@ -196,6 +199,6 @@
         </div>
         @endforelse
     </div>
-    
+
 </section>
 @endsection

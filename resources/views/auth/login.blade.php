@@ -1,23 +1,23 @@
 <x-auth-layout>
-    <x-slot name="title">Masuk - OMO! Your Fashion Partner</x-slot>
-    
+    <x-slot name="title">LOGIN-BERKEMAH</x-slot>
+
     <div x-data="{ loading: false }" class="space-y-6">
         <div class="text-center space-y-2">
-            <h2 class="text-2xl font-bold text-gray-800">Selamat Datang di OMO!</h2>
+            <h2 class="text-2xl font-bold text-gray-800">Selamat Datang di BERKEMAH</h2>
             <p class="text-gray-600">Temukan gaya fashion terbaikmu bersama kami</p>
         </div>
 
-        <form method="POST" 
-              action="{{ route('auth.login') }}" 
-              class="space-y-5" 
+        <form method="POST"
+              action="{{ route('auth.login') }}"
+              class="space-y-5"
               @submit="loading = true">
             @csrf
-            
+
             <div>
-                <x-auth-input 
-                    type="email" 
-                    name="email" 
-                    placeholder="Masukkan email Anda" 
+                <x-auth-input
+                    type="email"
+                    name="email"
+                    placeholder="Masukkan email Anda"
                     icon="envelope"
                     :value="old('email')"
                     required
@@ -26,10 +26,10 @@
             </div>
 
             <div>
-                <x-auth-input 
-                    type="password" 
-                    name="password" 
-                    placeholder="Masukkan kata sandi" 
+                <x-auth-input
+                    type="password"
+                    name="password"
+                    placeholder="Masukkan kata sandi"
                     icon="lock"
                     required
                     autocomplete="current-password"
@@ -37,7 +37,7 @@
             </div>
 
             <div class="flex items-center justify-between">
-                <a href="{{ route('auth.forget') }}" 
+                <a href="{{ route('auth.forget') }}"
                    class="text-sm text-blue-500 hover:text-blue-700 hover:underline transition-colors duration-200">
                     Lupa Kata Sandi?
                 </a>
@@ -67,8 +67,8 @@
         </div>
 
         <p class="text-center text-gray-600">
-            Belum punya akun? 
-            <a href="{{ route('auth.register') }}" 
+            Belum punya akun?
+            <a href="{{ route('auth.register') }}"
                class="text-blue-500 hover:text-blue-700 font-medium hover:underline transition-colors duration-200">
                 Bergabung Sekarang
             </a>

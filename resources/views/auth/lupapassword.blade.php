@@ -1,6 +1,6 @@
 <x-auth-layout>
-    <x-slot name="title">Lupa Password - OMO! Your Fashion Partner</x-slot>
-    
+    <x-slot name="title">Lupa Password - BERKEMAH</x-slot>
+
     <div x-data="{ loading: false }" class="space-y-6">
         <div class="text-center space-y-2">
             <h2 class="text-2xl font-bold text-gray-800">Lupa Kata Sandi?</h2>
@@ -10,12 +10,12 @@
         <form method="POST" action="{{ route('auth.forget') }}" class="space-y-4"
               @submit="loading = true">
             @csrf
-            
+
             <div>
-                <x-auth-input 
-                    type="email" 
-                    name="email" 
-                    placeholder="Masukkan email Anda" 
+                <x-auth-input
+                    type="email"
+                    name="email"
+                    placeholder="Masukkan email Anda"
                     icon="envelope"
                     :value="old('email')"
                     required
@@ -35,7 +35,7 @@
         </form>
 
         <p class="text-center text-gray-600">
-            Kembali ke 
+            Kembali ke
             <a href="{{ route('auth.login') }}" class="text-blue-500 hover:text-blue-700 font-medium hover:underline">
                 Halaman Login
             </a>
